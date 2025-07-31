@@ -1,0 +1,285 @@
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #c1d0b5 0%, #dbead2 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(115, 143, 91, 0.12);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e8f2e0;
+}
+
+.header h2 {
+  color: #738f5b;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.closeBtn:hover {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.errorMessage,
+.successMessage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.errorMessage {
+  background: #fee;
+  color: #c33;
+  border: 1px solid #fcc;
+}
+
+.successMessage {
+  background: #efe;
+  color: #363;
+  border: 1px solid #cfc;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  color: #738f5b;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.input,
+.textarea {
+  padding: 0.9rem 1.1rem;
+  border: 2px solid #e0e7d5;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  font-family: inherit;
+  background: #fbfdfb;
+}
+
+.input:focus,
+.textarea:focus {
+  background: #fff;
+  border-color: #88a071;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(136, 160, 113, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 150px;
+  line-height: 1.5;
+}
+
+.charCount {
+  font-size: 0.85rem;
+  color: #888;
+  text-align: right;
+  margin-top: -0.2rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.submitBtn {
+  background: #738f5b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #8f9f86;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(115, 143, 91, 0.3);
+}
+
+.submitBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.cancelBtn {
+  background: transparent;
+  color: #738f5b;
+  border: 2px solid #738f5b;
+  border-radius: 8px;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+}
+
+.cancelBtn:hover:not(:disabled) {
+  background: #738f5b;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.cancelBtn:disabled {
+  border-color: #ccc;
+  color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.infoSection {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e8f2e0;
+}
+
+.tips {
+  background: #f8fdf6;
+  padding: 1.2rem;
+  border-radius: 8px;
+  border-left: 4px solid #738f5b;
+}
+
+.tips h4 {
+  color: #738f5b;
+  font-size: 1rem;
+  margin: 0 0 0.8rem 0;
+  font-weight: 600;
+}
+
+.tips ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #666;
+}
+
+.tips li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+  }
+  
+  .textarea {
+    min-height: 120px;
+  }
+  
+  .tips {
+    padding: 1rem;
+  }
+  
+  .tips h4 {
+    font-size: 0.95rem;
+  }
+  
+  .tips li {
+    font-size: 0.85rem;
+  }
+}
+
+/* Estados especiales */
+.input:invalid,
+.textarea:invalid {
+  border-color: #e74c3c;
+}
+
+.input:valid,
+.textarea:valid {
+  border-color: #27ae60;
+}
+
+/* Animaciones */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: slideIn 0.3s ease-out;
+}
