@@ -177,3 +177,22 @@
 .saveBtn:hover {
   background: #8f9f86;
 }
+
+.backBtn {
+  margin-top: 0.8rem;
+  background: transparent;
+  color: #738f5b;
+  border: 2px solid #738f5b;
+  border-radius: 8px;
+  padding: 0.7rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.backBtn:hover {
+  background: #738f5b;
+  color: #fff;
+}

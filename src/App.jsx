@@ -1,10 +1,11 @@
 import React from "react";
-import ProfileEdit from "./ProfileEdit/ProfileEdit";
+import { RouterProvider } from "react-router-dom";
+import { router } from "../routes.jsx";
 
 function App() {
   return (
     <div>
-      <ProfileEdit />
+      <RouterProvider router={router} />
     </div>
   );
 }
